@@ -1,0 +1,62 @@
+cout<<"23 * 32="              <<23 * 32 
+ //输出字符串23 * 32=           //计算23 * 32结果
+#include<iostream>  // 包含标准输入输出流库的头文件，使程序能够使用输入输出流对象如cout
+using namespace std;  // 使用标准命名空间std，这样在使用标准库中的对象和函数时就不需要加std::前缀
+int main(){  // 程序的入口函数，程序从这里开始执行
+    cout<< "23 * 32=" <<23 * 32;  // 使用cout对象输出字符串"23 * 32="，然后输出23乘以32的计算结果
+    return 0;  // main函数返回0，表示程序正常结束
+}
+//输出结果为" 23 * 32=736。
+
+/ 求商
+% 求余
+
+题目思路
+定义变量n，g，s，b。
+int n, g, s, b;
+输入变量n。
+cin >> n;
+求解n的个位g。
+g = n % 10;
+将n的十位s转为个位并求解。
+s = n / 10 % 10;
+将n的百位b转为个位并求解。
+b = n / 100 % 10;
+输出 b，s，g。
+cout << b << ' ' << s << ' ' << g;
+
+事例：
+#include<iostream>
+using namespace std;
+int main(){
+    int n, g, s, b;
+    cin >> n; //输入一个三位数存到n
+    g = n % 10; //求出个位存到g中
+    s = n / 10 % 10;//求出十位存到s中
+    b = n / 100 % 10; //求出百位存到b中
+    cout << b << " " << s << " " << g; 
+    return 0;
+}
+
+
+n的数位拆分
+个位 → n % 10
+十位 → n / 10 % 10
+百位 → n / 100 % 10
+
+判断一个数是不是偶数 or 二的倍数
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number; // 声明变量
+    cin >> number; // 输入一个数存到 number
+
+    if (number % 2 == 0) {
+        cout << "yes"; // 如果 number 是偶数，输出 "yes"
+    } else {
+        cout << "no"; // 如果 number 是奇数，输出 "no"
+    }
+
+    return 0; // 程序正常结束
+}
